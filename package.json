@@ -31,6 +31,7 @@
   "keywords": [],
   "license": "ISC",
   "dependencies": {
+    "howler": "^2.2.3",
     "vitest": "^0.24.3"
   }
 }
