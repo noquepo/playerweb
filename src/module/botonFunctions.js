@@ -13,15 +13,12 @@ class Song {
     }
   }
 }
-
-export const metal = new Song("Hola", "hey", url);
-export
+export function pause() {
+  music.pause();
+}
 const music = new Howl({
-  src: [metal.url]
+  src: [url]
 });
 export function play() {
   return music.play();
-}
-export function pause() {
-  music.pause();
 }
