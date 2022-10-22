@@ -1,7 +1,27 @@
 :root{
-    --background-color:rgb(67, 178, 206);
+    --background-color:rgb(151, 223, 225);
+    --player-background:black;
+    --text-color:white;
+}
+@mixin base ($width, $height, $color, $text-color){
+    width: $width;
+    height: $height;
+    background-color: $color;
+    color:$text-color;
 }
 body, html{
     padding: 0;
-    background-color: var(--background-color);
+    border: 0;
+    height: 100%;
+}
+.container{
+    display: flex;
+    align-items: center;
+    @include base(100%, 100%, var(--background-color), var(--text-color));
+    .player {
+        @include base(350px, 500px,var(--player-background), var(--text-color));
+        .caratula{
+            @include base(200px,200px,var(--text-color),var(--player-background));
+        }
+    }
 }
