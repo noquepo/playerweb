@@ -9,6 +9,11 @@
     background-color: $color;
     color:$text-color;
 }
+@mixin botones {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
 body, html{
     padding: 0;
     border: 0;
@@ -19,9 +24,34 @@ body, html{
     align-items: center;
     @include base(100%, 100%, var(--background-color), var(--text-color));
     .player {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 5%;
         @include base(350px, 500px,var(--player-background), var(--text-color));
         .caratula{
             @include base(200px,200px,var(--text-color),var(--player-background));
+        }
+        .timer{
+            display: flex;
+            width: 100%;
+            .elapsedTime{
+                font-size: 10px;
+            }
+            .remainingTime{
+                font-size: 10px;
+            }
+        }
+        .buttons {
+          #buttonplay {
+            @include botones;
+          }
+          #prev {
+            @include botones;
+          }
+          #next {
+            @include botones;
+          }
         }
     }
 }
